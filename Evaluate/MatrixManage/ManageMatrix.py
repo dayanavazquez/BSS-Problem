@@ -1,14 +1,13 @@
 import numpy as np, math
-import Problem.BSSProblem as bss
 
 from ..Distance.distance_meter import calculate_distance_manhattan
 from utils import  BIG_FLOAT
 
-def _generate_matrix(bus_stop_list):
+def _generate_matrix(bus_stop_list, passenger_list):
 
     cost_matrix = []
 
-    for passenger in bss.passenger_list:
+    for passenger in passenger_list:
         distances = []
         
         for bus_stop in bus_stop_list:
@@ -24,11 +23,11 @@ def _generate_matrix(bus_stop_list):
 
     return np.array(cost_matrix)
 
-def min_values_sum(bus_stop_list):
+def min_values_sum(bus_stop_list, passenger_list):
 
     result = []
 
-    cost_matrix = _generate_matrix(bus_stop_list=bus_stop_list)
+    cost_matrix = _generate_matrix(bus_stop_list=bus_stop_list, passenger_list=passenger_list)
 
     while True:
 

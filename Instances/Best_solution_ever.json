@@ -1,3 +1,44 @@
 {
-    
+    "best_evers": [
+        {
+            "date_found": "2024-04-06",
+            "results": {
+                "instance": "instance_100",
+                "metaheuristic": "mh_HillClimbing",
+                "value": 550.7837364723058,
+                "max_bus_stop": 9,
+                "max_distance_walk": 10,
+                "max_passengers": 100,
+                "bus_stops": [
+                    {
+                        "bus_stop_info": "ID: 0  Total Passengers assigned: 7  Location: ( X: -4.589924972722185, Y: 18.754290638343974 )"
+                    },
+                    {
+                        "bus_stop_info": "ID: 2  Total Passengers assigned: 13  Location: ( X: 10.092600534721342, Y: -4.386689096490784 )"
+                    },
+                    {
+                        "bus_stop_info": "ID: 4  Total Passengers assigned: 10  Location: ( X: -16.029892021262754, Y: -9.589924972722185 )"
+                    },
+                    {
+                        "bus_stop_info": "ID: 6  Total Passengers assigned: 10  Location: ( X: 7.09811279775856, Y: 16.754290638343974 )"
+                    },
+                    {
+                        "bus_stop_info": "ID: 8  Total Passengers assigned: 10  Location: ( X: -8.589924972722185, Y: 7.09811279775856 )"
+                    },
+                    {
+                        "bus_stop_info": "ID: 10  Total Passengers assigned: 14  Location: ( X: 19.092600534721342, Y: -7.589924972722185 )"
+                    },
+                    {
+                        "bus_stop_info": "ID: 12  Total Passengers assigned: 10  Location: ( X: 15.754290638343974, Y: 10.09811279775856 )"
+                    },
+                    {
+                        "bus_stop_info": "ID: 14  Total Passengers assigned: 17  Location: ( X: 0.613081609731644, Y: -17.794434624448435 )"
+                    },
+                    {
+                        "bus_stop_info": "ID: 16  Total Passengers assigned: 9  Location: ( X: -19.029892021262754, Y: 10.09811279775856 )"
+                    }
+                ]
+            }
+        }
+    ]
 }

@@ -1,4 +1,7 @@
 import json
+import datetime
+
+from utils import play_sound_finish
 
 from .ManageProblem import Passenger, Point
 
@@ -20,7 +23,7 @@ def load_problem(instance):
                 ]
         }
         
-def save_solution(data):
+def save_solution(data, instance, conf=None):
 
     problem = {}
     best = {"results": []}
@@ -36,14 +39,47 @@ def save_solution(data):
     with open('Instances\saved_bss_best_results.json', 'w') as file:
         json.dump(problem, file, indent=4)
 
-    # with open('Instances\Best_solution_ever.json', 'w') as file:
-    #     best = json.load(file)
+    best_evers = {}
 
-    #     for b in problem["results"]:
-    #         if b.value > best[ data["instance"] ].value:
-    #             best = b
+    best_ever = {
+        "date_found": datetime.date.today(),
+        "results": ""
+    }
 
-    #     json.dump(best, file, indent=4)
-        
+    new_best = {
+        "date_found": datetime.date.today(),
+        "results": ""
+    }
 
+    try:
+        with open('Instances\Best_solution_ever.json', 'r') as file:
+            best_evers = json.load(file)
+
+            for b in best_evers["best_evers"]:
+                if b["results"]["instance"] == instance:
+                    best_ever = b
+                    break
+
+    except FileNotFoundError:
+        best_evers = {"best_evers": []}
+
+    changed_best = found_best_solution(problem=problem, best_solution=best_ever, instance=instance)
+    
+    with open('Instances\Best_solution_ever.json', 'w') as file:
+        json.dump(best_evers, file, indent=4)
+
+    play_sound_finish()
+ 
+def found_best_solution(problem, best_solution, instance):
+
+    for solution in problem["results"]:
+
+        if "value" not in best_solution["results"]:
+            best_solution["results"] = solution
             
+        elif (not best_solution or solution["value"] < best_solution["results"]["value"]) and solution["instance"] == instance:   
+            best_solution["results"] = solution
+           
+    best_solution["date_found"] = str(datetime.date.today())
+
+    return best_solution

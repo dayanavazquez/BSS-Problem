@@ -1,6 +1,10 @@
 import json
+
+import pyttsx3
+
 import numpy as np, math
-from .LoadProblem import load_problem, save_solution
+from .ManageProblem import BSS
+from .LoadProblem import load_problem as l, save_solution
 from Evaluate.evaluate_solution import evaluate, min_values_sum
 from Operators.operators import (
     random_change_for_lists, 
@@ -9,120 +13,124 @@ from Operators.operators import (
     first_permutation, 
     interchange, 
     next_permutation, 
-    uniform_crossover
+    mixed_crossover
 )
 
-INSTANCE_PROBLEM = "instance_27"
+MH = {
+    "mh_HillClimbing": "escalador de colinas",
+    "mh_EvolutionStrategy": "estrategia evolutiva",
+    "mh_RandomSearch": "busqueda aleatoria"
+}
 
-data = load_problem(instance=INSTANCE_PROBLEM)
 
-passenger_list = data["passengers"]
 
-MAX_DISTANCE_WALK = data["max_distance_walk"]
-MAX_BUS_STOP = data["max_bus_stop"]
-
-MAX_COORDINATE = data["max_coordinate"]
-MIN_COORDINATE = data["min_coordinate"]
-
-METAHEURISTIC = "mh_HillClimbing"
+bss: BSS = BSS()
 
 presentation  = 'Bus Stop Selection problem Variant VRP'
+
+def load_problem(instance, mh):
+    data = l(instance=instance)
+
+    bss.INSTANCE_PROBLEM = instance
+    bss.PASSENGER_LIST = data["passengers"]
+    bss.DISPLACE = 2.0
+    bss.MAX_DISTANCE_WALK = data["max_distance_walk"]
+    bss.MAX_BUS_STOP = data["max_bus_stop"]
+    bss.MAX_COORDINATE = data["max_coordinate"]
+    bss.MIN_COORDINATE = data["min_coordinate"]
+    bss.METAHEURISTIC = mh
 
 def present_problem():
     print('----------------------------------------------------------------------\n')
     print(presentation)
     print("\n")
-    print(f"MAX PASSENGERS: {len(passenger_list)}")
-    print(f"MAX BUS STOP: {MAX_BUS_STOP}\n")
+    print(f"MAX PASSENGERS: {len(bss.PASSENGER_LIST)}")
+    print(f"MAX BUS STOP: {bss.MAX_BUS_STOP}\n")
     print('----------------------------------------------------------------------')
 
 
 def objective_function(solution):
-    return evaluate(bus_stop_list=solution)
+    return evaluate(bus_stop_list=solution, passenger_list=bss.PASSENGER_LIST)
 
 def random_solution():
-    return random_list(LIST_LENGTH=MAX_BUS_STOP)
+    return random_list(LIST_LENGTH=bss.MAX_BUS_STOP)
 
 def not_random_solution():
-    return first_permutation(LIST_LENGTH=MAX_BUS_STOP)
+    return first_permutation(LIST_LENGTH=bss.MAX_BUS_STOP)
 
 def random_change(solution):
-    # return interchange(solution=solution)
     return random_change_for_lists(
         solution=solution, 
-        MIN_VALUE=-20.0, 
-        MAX_VALUE=20.0, 
-        displace=1
+        MIN_VALUE=bss.MIN_COORDINATE, 
+        MAX_VALUE=bss.MAX_COORDINATE, 
+        displace=bss.DISPLACE
     )
 
 def not_random_change(solution):
-    return next_permutation(solution=solution,LIST_LENGTH=MAX_BUS_STOP)
+    return next_permutation(solution=solution,LIST_LENGTH=bss.MAX_BUS_STOP)
 
 def random_combination(solution1,solution2):
-    return uniform_crossover(solution1,solution2)
+    return mixed_crossover(solution1,solution2)
 
-def print_solution_bss(bus_stop_list, eval):
+def print_solution_bss(mh: str, bus_stop_list, eval, conf=None):
     
     bus_stop_list = assign_passengers(bus_stop_list=bus_stop_list)
 
-    save_bus_stop(bus_stop_list=bus_stop_list, eval=eval)
+    save_bus_stop(mh=mh, bus_stop_list=bus_stop_list, eval=eval, conf=conf)
+
+    tam = bss.INSTANCE_PROBLEM[9:]
+
+    translate = f'metaheuristica {MH[mh]}, Instancia del problema: {tam}'
 
     print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
     print("**********************************************************\n")
 
     print(f"Best solution eval: {eval}")
+    print(f"Used MH: {mh}")
     print(f"Total number of bus stop: {len(bus_stop_list)} ")
 
     for bus_stop in bus_stop_list:
-
         print(str(bus_stop))
-
-        print("Passengers assigned: ")
-        bus_stop.inspect_passengers_assigned()
     
     print("\n")
     print("**********************************************************\n")
 
+    # engine = pyttsx3.init()
+    # engine.setProperty('rate', 143)
+    # engine.say(translate)
+    # engine.runAndWait()
+
 
 def assign_passengers(bus_stop_list):
 
-    min_values = min_values_sum(bus_stop_list=bus_stop_list)
+    min_values = min_values_sum(bus_stop_list=bus_stop_list, passenger_list=bss.PASSENGER_LIST)
 
     for value in min_values:
-        bus_stop_list[ value["column"] ].passenger_list.append(passenger_list[ value["row"] ].id)
+        bus_stop_list[ value["column"] ].passenger_list.append(bss.PASSENGER_LIST[ value["row"] ].id)
 
     return bus_stop_list
 
-def save_bus_stop(bus_stop_list, eval):
+def save_bus_stop(mh: str, bus_stop_list, eval, conf=None):
     bus_stop = []
 
     for bus in bus_stop_list:
         info = {"bus_stop_info": str(bus)}
 
-        # passengers = []
-
-        # for passenger in bus.passenger_list:
-        #     passengers.append(
-        #         {"passenger_info": str(passenger)}
-        #     )
-
-        # info["passengers"] = passengers
-
         bus_stop.append(info)
-
 
     data = {
         "results": {
-            "instance": INSTANCE_PROBLEM,
-            "metaheuristic": METAHEURISTIC,
+            "instance": bss.INSTANCE_PROBLEM,
+            "METAHEURISTIC": mh,
             "value": eval,
-            "max_bus_stop": MAX_BUS_STOP,
-            "max_distance_walk": MAX_DISTANCE_WALK,
-            "max_passengers": len(passenger_list),
+            "MAX_BUS_STOP": bss.MAX_BUS_STOP,
+            "MAX_DISTANCE_WALK": bss.MAX_DISTANCE_WALK,
+            "max_passengers": len(bss.PASSENGER_LIST),
+            "conf": conf,
             "bus_stops": bus_stop
         }
     }
 
-    save_solution(data)
+    save_solution(data, instance=bss.INSTANCE_PROBLEM)
     
