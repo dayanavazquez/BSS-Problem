@@ -1,5 +1,6 @@
 import random as ran, sys
 from Problem.ManageProblem import generate_bus_stop
+import pygame
 
 def generate_int(init: int = 1, end: int = 10):
     return ran.randint(init, end)
@@ -57,3 +58,21 @@ default = [
     -2.8, -2.1,
     15.4, -0.7
 ]
+
+def play_sound_changed():
+    pygame.init()
+    pygame.mixer.music.load('Sounds\chime.mp3')
+    pygame.mixer.music.play()
+    while pygame.mixer.music.get_busy():
+        pygame.time.Clock().tick(10)
+
+    pygame.quit()
+
+def play_sound_finish():
+    pygame.init()
+    pygame.mixer.music.load('Sounds\submit.mp3')
+    pygame.mixer.music.play()
+    while pygame.mixer.music.get_busy():
+        pygame.time.Clock().tick(10)
+
+    pygame.quit()

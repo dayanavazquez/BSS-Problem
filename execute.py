@@ -1,9 +1,12 @@
 import random
 import utils
+import pyttsx3
+
 # ----------------------------------------------------------------------
 # Import the objective function and operator from the corresponding problem
 # ----------------------------------------------------------------------
-
+from Problem.BSSProblem import load_problem
+from utils import play_sound_changed
 from Problem.BSSProblem import (
     print_solution_bss,
     present_problem, 
@@ -19,7 +22,7 @@ from Problem.BSSProblem import (
 # ----------------------------------------------------------------------
 # General configuration of the search procedures: By default
 # ----------------------------------------------------------------------
-
+TRANSLATE = f'Ya se termino esta pingaaa cojonee motito amo a follarrrrrr alee. Tengo gana de chuparte una shishi. (cara de malvado, procede a agarrarle una shishi)'
 OBJECTIVE_MAX   = False       # goal of the optimization, True: maximization, False: minimization
 MAX_TRIALS      = 1000       # maximum number of solutions to be explored by each metaheuristic
 ECHO            = False      # printing some traces of the run
@@ -104,9 +107,9 @@ def set_parameters(custom_parameters):
 # ///////////////
 # ----------------------------------------------------------------------
 
-def print_solution(solution, description):
+def print_solution(mh, solution, description, search_procedure):
     print(f"{description}\n")
-    print_solution_bss(solution, objective_function(solution))
+    print_solution_bss(mh=mh, bus_stop_list=solution,eval=objective_function(solution), conf=search_procedure[0][1])
 
 def is_better_than(evaluation1,evaluation2):
     greater1 = (evaluation1>evaluation2)
@@ -136,7 +139,7 @@ def mh_RandomSearch():
     best_evaluation = objective_function(best_solution)
     if ECHO:
         print(best_solution, best_evaluation)
-    for i in range(MAX_TRIALS-1):
+    for i in range(MAX_TRIALS):
         solution = random_solution()
         evaluation = objective_function(solution)
         if ECHO:
@@ -144,6 +147,11 @@ def mh_RandomSearch():
         if is_better_than(evaluation,best_evaluation):
             best_evaluation= evaluation
             best_solution= solution
+
+        if (i + 1) in [200, 400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000]:
+            print("\n")
+            print("INTERMEDIAL ANALYSIS")
+            print(f"EVALUATION: {evaluation}\n")
     return best_solution
 
 def mh_HillClimbing():
@@ -161,6 +169,12 @@ def mh_HillClimbing():
             best_solution= solution
             if ECHO:
                 print('change reference')
+
+        if (i + 1) in [200, 400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000]:
+            print("\n")
+            print("INTERMEDIAL ANALYSIS")
+            print(f"EVALUATION: {evaluation}\n")
+    
     return best_solution
 
 def mh_RandomWalk():
@@ -249,6 +263,16 @@ def mh_EvolutionStrategy():
         if ECHO:
             print(f'solutions    :{solutions}')
             print()
+
+        partition = int(int(MAX_TRIALS/GENERATION_SIZE) / 10)
+
+        nlist = [ partition*i for i in range(1, 10) ]
+
+        if g in nlist:
+            print("\n")
+            print("INTERMEDIAL ANALYSIS")
+            print(f"EVALUATION: {evaluation}\n")
+
     best_solution = solutions[0][1]
     return best_solution
 
@@ -311,25 +335,36 @@ def execute_mh(search_procedure, run = 0):
         print('Unknown search procedure')
     return best.copy()
 
-def compare_search_procedures(search_procedures):
+def compare_search_procedures(search_procedures, instance):
     present_problem()
     results = [[] for s in range(len(search_procedures))]
+    procedure = ""
     for s in range(len(search_procedures)):
         search_procedure = search_procedures[s][0]
         parameters = search_procedures[s][1]
         set_parameters(parameters)
         for r in range(RUNS):
             solution = execute_mh(search_procedure, r)
+            print("\n")
+            print(f"RUN: {r+1} mh: {search_procedure} INSTANCE: {instance}\n")
+            print("\n")
             evaluation = objective_function(solution)
             if ((s == 0) and (r == 0)) or (is_better_than(evaluation,best_evaluation)):
                 best = solution.copy()
                 best_evaluation = evaluation
+                procedure = search_procedures[s][0]
+                print("\n")
+                print(f"CHANGED BEST: {best_evaluation}")
+                play_sound_changed()
+
             results[s].append(evaluation)
             if ECHO:
-                print_solution(solution, search_procedure+"run"+str(r))
+                print_solution(mh=procedure,solution=solution,description=search_procedure+"run"+str(r), search_procedure=search_procedures)
+
+        print("\n")
         print(search_procedure,':',results[s])
     print()
-    print_solution(best,'Best solution found ---> ')
+    print_solution(mh=procedure, solution=best, description='', search_procedure=search_procedures)
     return(results)
 
 
@@ -337,30 +372,113 @@ def print_results(search_procedures,results_all):
     for s in range(len(search_procedures)):
         print(search_procedures[s][0],' (',search_procedures[s][1],') ',results_all[s])
 
-SEARCH_PROCEDURES = [
-['mh_HillClimbing', {'MAX_TRIALS': 1000, 'RUNS':5, 'TRESHOLD':3}],
+# search_procedures = [
+# ['mh_HillClimbing', {'MAX_TRIALS': 2000, 'RUNS':30, 'TRESHOLD': 3.55}],
 
 # ['mh_LocalSearch',  {'MAX_TRIALS': 1000, 'RUNS':20, 'TRESHOLD':0, 'CRITERION':'TA'}],
 # ['mh_LocalSearch',  {'MAX_TRIALS': 1000, 'RUNS':20, 'TRESHOLD':0, 'CRITERION':'RRT'}],
-# ['mh_LocalSearch',  {'MAX_TRIALS': 1000, 'RUNS':20, 'TRESHOLD':10, 'CRITERION':'TA'}],
-# ['mh_LocalSearch',  {'MAX_TRIALS': 1000, 'RUNS':20, 'TRESHOLD':10, 'CRITERION':'RRT'}],
+# ['mh_LocalSearch',  {'MAX_TRIALS': 5000, 'RUNS':5, 'TRESHOLD':3.25, 'CRITERION':'TA'}],
+# ['mh_LocalSearch',  {'MAX_TRIALS': 5000, 'RUNS':5, 'TRESHOLD':3.25, 'CRITERION':'RRT'}],
 
 # ['systematicSearch', {'MAX_TRIALS': 10000, 'RUNS':1}],
 # ['systematicSearch', {'MAX_TRIALS': 234, 'RUNS': 10, 'SYSTEMATIC_S_INI': False}],
 # ['systematicSearch', {'MAX_TRIALS': 234, 'RUNS': 1}],
 
 # ['mh_RandomWalk', {'MAX_TRIALS': 1000}],
-# ['mh_LocalSearch', {'MAX_TRIALS': 100}],
-
-# ['mh_EvolutionStrategy', {'MAX_TRIALS': 1000, 'RUNS': 10,'GENERATION_SIZE':  100, 'BEST_REFERENCES':  50} ],
-# ['mh_EvolutionStrategy', {'MAX_TRIALS': 1000}],
-# ['mh_GeneticAlgorithm', {'MAX_TRIALS': 1000, 'GENERATION_SIZE':  100, 'BEST_REFERENCES':  50} ],
+# ['mh_LocalSearch', {'MAX_TRIALS': 5000}],
+# ['mh_GeneticAlgorithm', {'MAX_TRIALS': 5000, 'RUNS': 30, 'GENERATION_SIZE':  400, 'BEST_REFERENCES':  25} ],
+# ['mh_EvolutionStrategy', {'MAX_TRIALS': 2000, 'RUNS': 30,'GENERATION_SIZE': 50, 'BEST_REFERENCES': 30} ],
+# ['mh_EvolutionStrategy', {'MAX_TRIALS': 2000, 'RUNS': 30}],
 # ['mh_GeneticAlgorithm', {'MAX_TRIALS': 10000, 'RUNS': 10}]
-]
+# ]
 
 # print_solution(random_solution(), "INITIAL SOLUTION")
 
-print_parameters()
-print()
-results = compare_search_procedures(SEARCH_PROCEDURES)
-print_results(SEARCH_PROCEDURES,results)
+search_procedures = []
+
+instances = [
+    "instance_10",
+    "instance_20",
+    "instance_30",
+    "instance_50",
+    "instance_70",
+    "instance_100",
+    "instance_120",
+    "instance_160",
+    "instance_180", 
+    "instance_200", 
+    "instance_250",
+    "instance_300"
+    ]
+
+mh = [
+    'mh_HillClimbing',
+    'mh_EvolutionStrategy',
+    'mh_RandomSearch'
+]
+
+conf_hc = [
+    {'MAX_TRIALS': 2000, 'RUNS':10, 'TRESHOLD': 1.55},
+    {'MAX_TRIALS': 1000, 'RUNS':10, 'TRESHOLD': 2.55},
+    {'MAX_TRIALS': 1000, 'RUNS':10, 'TRESHOLD': 2.75},
+    {'MAX_TRIALS': 1000, 'RUNS':10, 'TRESHOLD': 3.05},
+    {'MAX_TRIALS': 1000, 'RUNS':10, 'TRESHOLD': 3.25}
+]
+
+conf_ee = [
+    {'MAX_TRIALS': 1000, 'RUNS': 10,'GENERATION_SIZE': 60, 'BEST_REFERENCES': 30},
+    {'MAX_TRIALS': 1000, 'RUNS': 10,'GENERATION_SIZE': 80, 'BEST_REFERENCES': 35},
+    {'MAX_TRIALS': 1000, 'RUNS': 10,'GENERATION_SIZE': 120, 'BEST_REFERENCES': 60},
+    {'MAX_TRIALS': 1000, 'RUNS': 10,'GENERATION_SIZE': 150, 'BEST_REFERENCES': 70},
+    {'MAX_TRIALS': 1000, 'RUNS': 10}
+]
+
+conf_rs =[
+    {'MAX_TRIALS': 1000, 'RUNS': 10},
+    {'MAX_TRIALS': 1000, 'RUNS': 10},
+    {'MAX_TRIALS': 1000, 'RUNS': 10},
+    {'MAX_TRIALS': 1000, 'RUNS': 10},
+    {'MAX_TRIALS': 1000, 'RUNS': 10}
+]
+
+def multi_run():
+
+    for instance in instances:
+
+        conf = 0
+        run_mh = 0
+        mh_ = mh[run_mh]
+
+        for i in range(15):
+
+            if conf == 5:
+                conf = 0
+                mh_ = mh[run_mh]
+                run_mh+=1
+
+            load_problem(instance=instance, mh=mh_)
+
+            search_procedures = []
+
+            if i < 5:
+                search_procedures = [[mh[0], conf_hc[conf]]]
+
+            elif 5 <= i < 10:
+                search_procedures = [[mh[1], conf_ee[conf]]]
+
+            else:
+                search_procedures = [[mh[2], conf_rs[0]]]
+
+            conf+=1
+
+            print_parameters()
+            results = compare_search_procedures(search_procedures=search_procedures, instance=instance)
+            print_results(search_procedures,results)
+
+    
+    engine = pyttsx3.init()
+    engine.setProperty('rate', 140)
+    engine.say(TRANSLATE)
+    engine.runAndWait()
+
+multi_run()

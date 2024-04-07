@@ -1,3 +1,15 @@
+class BSS():
+
+    def __init__(self):
+        self.INSTANCE_PROBLEM = "i"
+        self.PASSENGER_LIST = []
+        self.DISPLACE = 3.0
+        self.MAX_DISTANCE_WALK = 300.0
+        self.MAX_BUS_STOP = 10
+        self.MAX_COORDINATE = 20.0
+        self.MIN_COORDINATE = 20.0
+        self.METAHEURISTIC = "m"
+
 class Point():
 
     def __init__(self, coordinate_x: float, coordinate_y: float):

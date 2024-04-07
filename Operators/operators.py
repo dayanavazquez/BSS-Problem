@@ -171,6 +171,22 @@ def ox_crossover(solution, solutionAlt): # OX crossover for permutation. A rando
             pos_to_add+=1
     return new_solution
 
+
+def mixed_crossover(solution1, solution2):
+    p = generate_probability()
+
+    solution = None
+
+    if p < 0.5:
+        solution = ox_crossover(solution=solution1, solutionAlt=solution2)
+    elif p >= 0.5:
+        solution = uniform_crossover(solution=solution1, solutionAlt=solution2)
+
+    if generate_probability() <= 0.2:
+        solution = random_change_for_lists(solution=solution)
+
+    return solution
+
 # ----------------------------------------------------------------------
 # for exhaustive search
 # ----------------------------------------------------------------------
