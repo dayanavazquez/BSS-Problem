@@ -22,7 +22,7 @@ from Problem.BSSProblem import (
 # ----------------------------------------------------------------------
 # General configuration of the search procedures: By default
 # ----------------------------------------------------------------------
-TRANSLATE = f'Ya se termino esta pingaaa cojonee motito amo a follarrrrrr alee. Tengo gana de chuparte una shishi. (cara de malvado, procede a agarrarle una shishi)'
+TRANSLATE = f'Analisis de metaheuristicas finalizado'
 OBJECTIVE_MAX   = False       # goal of the optimization, True: maximization, False: minimization
 MAX_TRIALS      = 1000       # maximum number of solutions to be explored by each metaheuristic
 ECHO            = False      # printing some traces of the run
