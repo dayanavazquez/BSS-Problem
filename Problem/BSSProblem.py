@@ -80,7 +80,7 @@ def print_solution_bss(mh: str, bus_stop_list, eval, conf=None):
 
     tam = bss.INSTANCE_PROBLEM[9:]
 
-    translate = f'metaheuristica {MH[mh]}, Instancia del problema: {tam}'
+    translate = f'Mejor evaluación encontrada con la metaheuristica {MH[mh]}: {eval}, Instancia del problema: {tam}'
 
     print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 
@@ -96,10 +96,10 @@ def print_solution_bss(mh: str, bus_stop_list, eval, conf=None):
     print("\n")
     print("**********************************************************\n")
 
-    # engine = pyttsx3.init()
-    # engine.setProperty('rate', 143)
-    # engine.say(translate)
-    # engine.runAndWait()
+    engine = pyttsx3.init()
+    engine.setProperty('rate', 143)
+    engine.say(translate)
+    engine.runAndWait()
 
 
 def assign_passengers(bus_stop_list):
@@ -133,4 +133,6 @@ def save_bus_stop(mh: str, bus_stop_list, eval, conf=None):
     }
 
     save_solution(data, instance=bss.INSTANCE_PROBLEM)
+
+    
     
