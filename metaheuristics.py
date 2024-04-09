@@ -176,14 +176,14 @@ def mh_HillClimbing():
 def mh_RandomWalk():
     best_solution = random_solution()
     best_evaluation = objective_function(best_solution)
-    if ECHO:
-        print(best_solution, best_evaluation)
+    # if ECHO:
+    #     print(best_solution, best_evaluation)
     last_solution= best_solution
     for i in range(MAX_TRIALS):
         solution = random_change(last_solution.copy()) # a change with respect to the last solution
         evaluation = objective_function(solution)
-        if ECHO:
-            print(solution,evaluation,last_solution)
+        # if ECHO:
+        #     print(solution,evaluation,last_solution)
         last_solution = solution
         if is_better_than(evaluation, best_evaluation):
             best_evaluation= evaluation

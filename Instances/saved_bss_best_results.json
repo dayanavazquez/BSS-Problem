@@ -8644,96 +8644,6 @@
             ]
         },
         {
-            "instance": "instance_300",
-            "METAHEURISTIC": "mh_HillClimbing",
-            "value": 1015.2318236174474,
-            "MAX_BUS_STOP": 25,
-            "MAX_DISTANCE_WALK": 10,
-            "max_passengers": 290,
-            "conf": {
-                "MAX_TRIALS": 2000,
-                "RUNS": 10,
-                "TRESHOLD": 1.55
-            },
-            "bus_stops": [
-                {
-                    "bus_stop_info": "ID: 0  Total Passengers assigned: 16  Location: ( X: 13.370782494416439, Y: -7.94938827711055 )"
-                },
-                {
-                    "bus_stop_info": "ID: 2  Total Passengers assigned: 19  Location: ( X: 17.533323073148047, Y: 13.370782494416439 )"
-                },
-                {
-                    "bus_stop_info": "ID: 4  Total Passengers assigned: 11  Location: ( X: -5.898789939673804, Y: 17.94549919475231 )"
-                },
-                {
-                    "bus_stop_info": "ID: 6  Total Passengers assigned: 19  Location: ( X: 9.058752510460543, Y: -2.017988976609246 )"
-                },
-                {
-                    "bus_stop_info": "ID: 8  Total Passengers assigned: 8  Location: ( X: 14.903079657851407, Y: 5.350847043745638 )"
-                },
-                {
-                    "bus_stop_info": "ID: 10  Total Passengers assigned: 12  Location: ( X: -18.921648750333354, Y: -11.475647177591826 )"
-                },
-                {
-                    "bus_stop_info": "ID: 12  Total Passengers assigned: 8  Location: ( X: 5.350847043745638, Y: -16.20514326657934 )"
-                },
-                {
-                    "bus_stop_info": "ID: 14  Total Passengers assigned: 5  Location: ( X: 28.57532084868882, Y: 5.828792632716265 )"
-                },
-                {
-                    "bus_stop_info": "ID: 16  Total Passengers assigned: 13  Location: ( X: 12.54747978327886, Y: -12.451407486146097 )"
-                },
-                {
-                    "bus_stop_info": "ID: 18  Total Passengers assigned: 8  Location: ( X: -18.982047114149196, Y: 15.094614438036267 )"
-                },
-                {
-                    "bus_stop_info": "ID: 20  Total Passengers assigned: 14  Location: ( X: -9.251390479010034, Y: -18.347326242431503 )"
-                },
-                {
-                    "bus_stop_info": "ID: 22  Total Passengers assigned: 8  Location: ( X: -7.823306518567154, Y: 1.6642500359341312 )"
-                },
-                {
-                    "bus_stop_info": "ID: 24  Total Passengers assigned: 10  Location: ( X: 18.760442390569985, Y: -3.434649341422567 )"
-                },
-                {
-                    "bus_stop_info": "ID: 26  Total Passengers assigned: 9  Location: ( X: -19.684016201089733, Y: -1.5544440237950745 )"
-                },
-                {
-                    "bus_stop_info": "ID: 28  Total Passengers assigned: 15  Location: ( X: 19.094614438036267, Y: -12.451407486146097 )"
-                },
-                {
-                    "bus_stop_info": "ID: 30  Total Passengers assigned: 10  Location: ( X: -9.251390479010034, Y: 7.058752510460543 )"
-                },
-                {
-                    "bus_stop_info": "ID: 32  Total Passengers assigned: 13  Location: ( X: -3.8987899396738044, Y: 2.4596749767960446 )"
-                },
-                {
-                    "bus_stop_info": "ID: 34  Total Passengers assigned: 11  Location: ( X: -12.959218306354185, Y: 7.058752510460543 )"
-                },
-                {
-                    "bus_stop_info": "ID: 36  Total Passengers assigned: 11  Location: ( X: -14.762616300645263, Y: -7.251390479010034 )"
-                },
-                {
-                    "bus_stop_info": "ID: 38  Total Passengers assigned: 11  Location: ( X: -1.8987899396738044, Y: -18.347326242431503 )"
-                },
-                {
-                    "bus_stop_info": "ID: 40  Total Passengers assigned: 6  Location: ( X: -2.3357499640658688, Y: -9.475647177591826 )"
-                },
-                {
-                    "bus_stop_info": "ID: 42  Total Passengers assigned: 14  Location: ( X: -2.017988976609246, Y: 7.058752510460543 )"
-                },
-                {
-                    "bus_stop_info": "ID: 44  Total Passengers assigned: 12  Location: ( X: -18.20514326657934, Y: 9.058752510460543 )"
-                },
-                {
-                    "bus_stop_info": "ID: 46  Total Passengers assigned: 10  Location: ( X: 7.058752510460543, Y: 11.058752510460543 )"
-                },
-                {
-                    "bus_stop_info": "ID: 48  Total Passengers assigned: 17  Location: ( X: 7.058752510460543, Y: 17.11223155849185 )"
-                }
-            ]
-        },
-        {
             "instance": "instance_30",
             "METAHEURISTIC": "heuristic",
             "value": 107.33042129367821,
@@ -8972,6 +8882,985 @@
                 },
                 {
                     "bus_stop_info": "ID: 18  Total Passengers assigned: 8  Location: ( X: -17.372648, Y: -0.394726 )"
+                }
+            ]
+        },
+        {
+            "instance": "instance_300",
+            "METAHEURISTIC": "heuristic",
+            "value": 1570.9186896074596,
+            "MAX_BUS_STOP": 25,
+            "MAX_DISTANCE_WALK": 10,
+            "max_passengers": 290,
+            "conf": null,
+            "bus_stops": [
+                {
+                    "bus_stop_info": "ID: 0  Total Passengers assigned: 13  Location: ( X: 6.741620638950711, Y: -2.9101206657725074 )"
+                },
+                {
+                    "bus_stop_info": "ID: 1  Total Passengers assigned: 18  Location: ( X: 5.107385690996232, Y: 9.592822923740803 )"
+                },
+                {
+                    "bus_stop_info": "ID: 2  Total Passengers assigned: 3  Location: ( X: 10.624314145460401, Y: 4.664651658946894 )"
+                },
+                {
+                    "bus_stop_info": "ID: 3  Total Passengers assigned: 8  Location: ( X: -11.84904737795238, Y: -8.364174894619048 )"
+                },
+                {
+                    "bus_stop_info": "ID: 4  Total Passengers assigned: 10  Location: ( X: 10.241398124705883, Y: 9.572239800294117 )"
+                },
+                {
+                    "bus_stop_info": "ID: 5  Total Passengers assigned: 12  Location: ( X: -4.158619335923077, Y: 11.698271312153846 )"
+                },
+                {
+                    "bus_stop_info": "ID: 6  Total Passengers assigned: 4  Location: ( X: -1.3700826682608693, Y: -8.09424843673913 )"
+                },
+                {
+                    "bus_stop_info": "ID: 7  Total Passengers assigned: 10  Location: ( X: -8.749049683103447, Y: 3.10515063337931 )"
+                },
+                {
+                    "bus_stop_info": "ID: 8  Total Passengers assigned: 15  Location: ( X: 13.181125898545456, Y: -3.56489478159091 )"
+                },
+                {
+                    "bus_stop_info": "ID: 9  Total Passengers assigned: 8  Location: ( X: -10.180515979851853, Y: 1.770087604851852 )"
+                },
+                {
+                    "bus_stop_info": "ID: 10  Total Passengers assigned: 7  Location: ( X: 7.6827271891111115, Y: -10.800455142444443 )"
+                },
+                {
+                    "bus_stop_info": "ID: 11  Total Passengers assigned: 10  Location: ( X: -20.0, Y: 20.0 )"
+                },
+                {
+                    "bus_stop_info": "ID: 12  Total Passengers assigned: 26  Location: ( X: 13.333333333333334, Y: -13.333333333333334 )"
+                },
+                {
+                    "bus_stop_info": "ID: 13  Total Passengers assigned: 16  Location: ( X: 4.321098765, Y: -18.765432109 )"
+                },
+                {
+                    "bus_stop_info": "ID: 14  Total Passengers assigned: 23  Location: ( X: -5.966147992928572, Y: 4.554567420714286 )"
+                },
+                {
+                    "bus_stop_info": "ID: 15  Total Passengers assigned: 15  Location: ( X: 18.901234567, Y: 0.123456789 )"
+                },
+                {
+                    "bus_stop_info": "ID: 16  Total Passengers assigned: 5  Location: ( X: -0.37978639174999995, Y: -12.5397785 )"
+                },
+                {
+                    "bus_stop_info": "ID: 17  Total Passengers assigned: 15  Location: ( X: -10.4292109505, Y: 13.790624117 )"
+                },
+                {
+                    "bus_stop_info": "ID: 18  Total Passengers assigned: 17  Location: ( X: -17.372648, Y: -0.394726 )"
+                },
+                {
+                    "bus_stop_info": "ID: 19  Total Passengers assigned: 12  Location: ( X: -9.661237, Y: -15.664296 )"
+                },
+                {
+                    "bus_stop_info": "ID: 20  Total Passengers assigned: 7  Location: ( X: -15.661237, Y: -18.404663333333335 )"
+                },
+                {
+                    "bus_stop_info": "ID: 21  Total Passengers assigned: 13  Location: ( X: 16.882339, Y: 17.994570333333332 )"
+                },
+                {
+                    "bus_stop_info": "ID: 22  Total Passengers assigned: 10  Location: ( X: -21.661237, Y: -12.882339 )"
+                },
+                {
+                    "bus_stop_info": "ID: 23  Total Passengers assigned: 13  Location: ( X: 21.882339, Y: 12.661237 )"
+                }
+            ]
+        },
+        {
+            "instance": "instance_250",
+            "METAHEURISTIC": "heuristic",
+            "value": 1429.8561441434636,
+            "MAX_BUS_STOP": 20,
+            "MAX_DISTANCE_WALK": 10,
+            "max_passengers": 240,
+            "conf": null,
+            "bus_stops": [
+                {
+                    "bus_stop_info": "ID: 0  Total Passengers assigned: 6  Location: ( X: 4.623528874353606, Y: -1.6207906478992204 )"
+                },
+                {
+                    "bus_stop_info": "ID: 1  Total Passengers assigned: 22  Location: ( X: 6.5415700586041075, Y: 10.645680559336629 )"
+                },
+                {
+                    "bus_stop_info": "ID: 2  Total Passengers assigned: 3  Location: ( X: 10.624314145460401, Y: 4.664651658946894 )"
+                },
+                {
+                    "bus_stop_info": "ID: 3  Total Passengers assigned: 18  Location: ( X: -12.15843789685, Y: -8.19932178935 )"
+                },
+                {
+                    "bus_stop_info": "ID: 4  Total Passengers assigned: 14  Location: ( X: 10.80767276, Y: 7.450294800416665 )"
+                },
+                {
+                    "bus_stop_info": "ID: 5  Total Passengers assigned: 11  Location: ( X: -4.158619335923077, Y: 11.698271312153846 )"
+                },
+                {
+                    "bus_stop_info": "ID: 6  Total Passengers assigned: 4  Location: ( X: -2.4297908615789474, Y: -9.184925739210527 )"
+                },
+                {
+                    "bus_stop_info": "ID: 7  Total Passengers assigned: 10  Location: ( X: -8.24488488185185, Y: 2.6562117543703696 )"
+                },
+                {
+                    "bus_stop_info": "ID: 8  Total Passengers assigned: 16  Location: ( X: 13.176808655619048, Y: -3.4224957473809536 )"
+                },
+                {
+                    "bus_stop_info": "ID: 9  Total Passengers assigned: 8  Location: ( X: -9.966078541565217, Y: 1.2326158839565218 )"
+                },
+                {
+                    "bus_stop_info": "ID: 10  Total Passengers assigned: 7  Location: ( X: 7.6827271891111115, Y: -10.800455142444443 )"
+                },
+                {
+                    "bus_stop_info": "ID: 11  Total Passengers assigned: 9  Location: ( X: -20.0, Y: 20.0 )"
+                },
+                {
+                    "bus_stop_info": "ID: 12  Total Passengers assigned: 25  Location: ( X: 13.333333333333334, Y: -13.333333333333334 )"
+                },
+                {
+                    "bus_stop_info": "ID: 13  Total Passengers assigned: 10  Location: ( X: 4.321098765, Y: -18.765432109 )"
+                },
+                {
+                    "bus_stop_info": "ID: 14  Total Passengers assigned: 18  Location: ( X: -3.8650844901000005, Y: 3.810981889 )"
+                },
+                {
+                    "bus_stop_info": "ID: 15  Total Passengers assigned: 16  Location: ( X: 18.901234567, Y: 0.123456789 )"
+                },
+                {
+                    "bus_stop_info": "ID: 16  Total Passengers assigned: 14  Location: ( X: 1.7957017165, Y: -16.4137315 )"
+                },
+                {
+                    "bus_stop_info": "ID: 17  Total Passengers assigned: 15  Location: ( X: -10.4292109505, Y: 13.790624117 )"
+                },
+                {
+                    "bus_stop_info": "ID: 18  Total Passengers assigned: 14  Location: ( X: -17.372648, Y: -0.394726 )"
+                }
+            ]
+        },
+        {
+            "instance": "instance_250",
+            "METAHEURISTIC": "heuristic",
+            "value": 1429.8561441434636,
+            "MAX_BUS_STOP": 20,
+            "MAX_DISTANCE_WALK": 10,
+            "max_passengers": 240,
+            "conf": null,
+            "bus_stops": [
+                {
+                    "bus_stop_info": "ID: 0  Total Passengers assigned: 6  Location: ( X: 4.623528874353606, Y: -1.6207906478992204 )"
+                },
+                {
+                    "bus_stop_info": "ID: 1  Total Passengers assigned: 22  Location: ( X: 6.5415700586041075, Y: 10.645680559336629 )"
+                },
+                {
+                    "bus_stop_info": "ID: 2  Total Passengers assigned: 3  Location: ( X: 10.624314145460401, Y: 4.664651658946894 )"
+                },
+                {
+                    "bus_stop_info": "ID: 3  Total Passengers assigned: 18  Location: ( X: -12.15843789685, Y: -8.19932178935 )"
+                },
+                {
+                    "bus_stop_info": "ID: 4  Total Passengers assigned: 14  Location: ( X: 10.80767276, Y: 7.450294800416665 )"
+                },
+                {
+                    "bus_stop_info": "ID: 5  Total Passengers assigned: 11  Location: ( X: -4.158619335923077, Y: 11.698271312153846 )"
+                },
+                {
+                    "bus_stop_info": "ID: 6  Total Passengers assigned: 4  Location: ( X: -2.4297908615789474, Y: -9.184925739210527 )"
+                },
+                {
+                    "bus_stop_info": "ID: 7  Total Passengers assigned: 10  Location: ( X: -8.24488488185185, Y: 2.6562117543703696 )"
+                },
+                {
+                    "bus_stop_info": "ID: 8  Total Passengers assigned: 16  Location: ( X: 13.176808655619048, Y: -3.4224957473809536 )"
+                },
+                {
+                    "bus_stop_info": "ID: 9  Total Passengers assigned: 8  Location: ( X: -9.966078541565217, Y: 1.2326158839565218 )"
+                },
+                {
+                    "bus_stop_info": "ID: 10  Total Passengers assigned: 7  Location: ( X: 7.6827271891111115, Y: -10.800455142444443 )"
+                },
+                {
+                    "bus_stop_info": "ID: 11  Total Passengers assigned: 9  Location: ( X: -20.0, Y: 20.0 )"
+                },
+                {
+                    "bus_stop_info": "ID: 12  Total Passengers assigned: 25  Location: ( X: 13.333333333333334, Y: -13.333333333333334 )"
+                },
+                {
+                    "bus_stop_info": "ID: 13  Total Passengers assigned: 10  Location: ( X: 4.321098765, Y: -18.765432109 )"
+                },
+                {
+                    "bus_stop_info": "ID: 14  Total Passengers assigned: 18  Location: ( X: -3.8650844901000005, Y: 3.810981889 )"
+                },
+                {
+                    "bus_stop_info": "ID: 15  Total Passengers assigned: 16  Location: ( X: 18.901234567, Y: 0.123456789 )"
+                },
+                {
+                    "bus_stop_info": "ID: 16  Total Passengers assigned: 14  Location: ( X: 1.7957017165, Y: -16.4137315 )"
+                },
+                {
+                    "bus_stop_info": "ID: 17  Total Passengers assigned: 15  Location: ( X: -10.4292109505, Y: 13.790624117 )"
+                },
+                {
+                    "bus_stop_info": "ID: 18  Total Passengers assigned: 14  Location: ( X: -17.372648, Y: -0.394726 )"
+                }
+            ]
+        },
+        {
+            "instance": "instance_50",
+            "METAHEURISTIC": "heuristic",
+            "value": 179.81201991316107,
+            "MAX_BUS_STOP": 6,
+            "MAX_DISTANCE_WALK": 10,
+            "max_passengers": 50,
+            "conf": null,
+            "bus_stops": [
+                {
+                    "bus_stop_info": "ID: 0  Total Passengers assigned: 4  Location: ( X: 4.711581900453085, Y: -3.0536212575141968 )"
+                },
+                {
+                    "bus_stop_info": "ID: 1  Total Passengers assigned: 5  Location: ( X: 6.702798951578901, Y: 14.573758872348497 )"
+                },
+                {
+                    "bus_stop_info": "ID: 2  Total Passengers assigned: 4  Location: ( X: 13.795252740021459, Y: 2.617167589471944 )"
+                },
+                {
+                    "bus_stop_info": "ID: 3  Total Passengers assigned: 3  Location: ( X: -16.70448192666667, Y: -10.736255514 )"
+                },
+                {
+                    "bus_stop_info": "ID: 4  Total Passengers assigned: 4  Location: ( X: 17.003370061, Y: 12.345678676 )"
+                },
+                {
+                    "bus_stop_info": "ID: 5  Total Passengers assigned: 4  Location: ( X: -3.6203364225, Y: 17.533950589 )"
+                },
+                {
+                    "bus_stop_info": "ID: 6  Total Passengers assigned: 2  Location: ( X: -5.6734562340000005, Y: -15.1233956785 )"
+                },
+                {
+                    "bus_stop_info": "ID: 7  Total Passengers assigned: 4  Location: ( X: -18.04337691625, Y: 9.128331188499999 )"
+                },
+                {
+                    "bus_stop_info": "ID: 8  Total Passengers assigned: 6  Location: ( X: 17.27848340657143, Y: -7.8640564051428585 )"
+                },
+                {
+                    "bus_stop_info": "ID: 9  Total Passengers assigned: 4  Location: ( X: -6.905819886, Y: 6.58629783925 )"
+                },
+                {
+                    "bus_stop_info": "ID: 10  Total Passengers assigned: 4  Location: ( X: 7.2900679004999995, Y: -13.456734562 )"
+                },
+                {
+                    "bus_stop_info": "ID: 11  Total Passengers assigned: 2  Location: ( X: -20.0, Y: 20.0 )"
+                },
+                {
+                    "bus_stop_info": "ID: 12  Total Passengers assigned: 2  Location: ( X: 20.0, Y: -20.0 )"
+                },
+                {
+                    "bus_stop_info": "ID: 13  Total Passengers assigned: 1  Location: ( X: 4.321098765, Y: -18.765432109 )"
+                },
+                {
+                    "bus_stop_info": "ID: 14  Total Passengers assigned: 1  Location: ( X: -12.345678901, Y: 1.23456789 )"
+                }
+            ]
+        },
+        {
+            "instance": "instance_70",
+            "METAHEURISTIC": "heuristic",
+            "value": 264.28429113212604,
+            "MAX_BUS_STOP": 9,
+            "MAX_DISTANCE_WALK": 10,
+            "max_passengers": 70,
+            "conf": null,
+            "bus_stops": [
+                {
+                    "bus_stop_info": "ID: 0  Total Passengers assigned: 6  Location: ( X: 5.449433516102644, Y: -3.234689472869312 )"
+                },
+                {
+                    "bus_stop_info": "ID: 1  Total Passengers assigned: 7  Location: ( X: 6.410288476699215, Y: 15.363990023248927 )"
+                },
+                {
+                    "bus_stop_info": "ID: 2  Total Passengers assigned: 3  Location: ( X: 13.795252740021459, Y: 2.617167589471944 )"
+                },
+                {
+                    "bus_stop_info": "ID: 3  Total Passengers assigned: 5  Location: ( X: -17.111578266800002, Y: -10.910642195 )"
+                },
+                {
+                    "bus_stop_info": "ID: 4  Total Passengers assigned: 5  Location: ( X: 16.689118024, Y: 12.345678721 )"
+                },
+                {
+                    "bus_stop_info": "ID: 5  Total Passengers assigned: 5  Location: ( X: -3.9826911132, Y: 16.940738495799998 )"
+                },
+                {
+                    "bus_stop_info": "ID: 6  Total Passengers assigned: 3  Location: ( X: -2.89845650925, Y: -17.287006481 )"
+                },
+                {
+                    "bus_stop_info": "ID: 7  Total Passengers assigned: 6  Location: ( X: -17.584473314500002, Y: 7.608002666666667 )"
+                },
+                {
+                    "bus_stop_info": "ID: 8  Total Passengers assigned: 8  Location: ( X: 16.27025721936364, Y: -7.183984144363637 )"
+                },
+                {
+                    "bus_stop_info": "ID: 9  Total Passengers assigned: 6  Location: ( X: -7.218921076000001, Y: 6.571937055166667 )"
+                },
+                {
+                    "bus_stop_info": "ID: 10  Total Passengers assigned: 5  Location: ( X: 7.87340123125, Y: -14.0120400925 )"
+                },
+                {
+                    "bus_stop_info": "ID: 11  Total Passengers assigned: 2  Location: ( X: -20.0, Y: 20.0 )"
+                },
+                {
+                    "bus_stop_info": "ID: 12  Total Passengers assigned: 2  Location: ( X: 20.0, Y: -20.0 )"
+                },
+                {
+                    "bus_stop_info": "ID: 13  Total Passengers assigned: 3  Location: ( X: 4.321098765, Y: -18.765432109 )"
+                },
+                {
+                    "bus_stop_info": "ID: 14  Total Passengers assigned: 1  Location: ( X: -12.345678901, Y: 1.23456789 )"
+                },
+                {
+                    "bus_stop_info": "ID: 15  Total Passengers assigned: 3  Location: ( X: 18.901234567, Y: 0.123456789 )"
+                }
+            ]
+        },
+        {
+            "instance": "instance_120",
+            "METAHEURISTIC": "heuristic",
+            "value": 488.88758530702546,
+            "MAX_BUS_STOP": 10,
+            "MAX_DISTANCE_WALK": 10,
+            "max_passengers": 120,
+            "conf": null,
+            "bus_stops": [
+                {
+                    "bus_stop_info": "ID: 0  Total Passengers assigned: 6  Location: ( X: 5.449433516102644, Y: -3.234689472869312 )"
+                },
+                {
+                    "bus_stop_info": "ID: 1  Total Passengers assigned: 14  Location: ( X: 6.871446239135322, Y: 15.154487347481606 )"
+                },
+                {
+                    "bus_stop_info": "ID: 2  Total Passengers assigned: 6  Location: ( X: 14.566098511118266, Y: 5.084771583157315 )"
+                },
+                {
+                    "bus_stop_info": "ID: 3  Total Passengers assigned: 11  Location: ( X: -15.37916161053846, Y: -10.193979522076923 )"
+                },
+                {
+                    "bus_stop_info": "ID: 4  Total Passengers assigned: 6  Location: ( X: 16.689118024, Y: 12.345678721 )"
+                },
+                {
+                    "bus_stop_info": "ID: 5  Total Passengers assigned: 7  Location: ( X: -5.0524921708749995, Y: 16.62363288225 )"
+                },
+                {
+                    "bus_stop_info": "ID: 6  Total Passengers assigned: 9  Location: ( X: -1.1885687808333332, Y: -17.71291358708333 )"
+                },
+                {
+                    "bus_stop_info": "ID: 7  Total Passengers assigned: 9  Location: ( X: -17.055770281, Y: 7.999272736799999 )"
+                },
+                {
+                    "bus_stop_info": "ID: 8  Total Passengers assigned: 14  Location: ( X: 16.851287502117646, Y: -8.009522081764706 )"
+                },
+                {
+                    "bus_stop_info": "ID: 9  Total Passengers assigned: 7  Location: ( X: -6.647510493714287, Y: 6.474562333000001 )"
+                },
+                {
+                    "bus_stop_info": "ID: 10  Total Passengers assigned: 6  Location: ( X: 8.047063783666667, Y: -15.289734547 )"
+                },
+                {
+                    "bus_stop_info": "ID: 11  Total Passengers assigned: 2  Location: ( X: -20.0, Y: 20.0 )"
+                },
+                {
+                    "bus_stop_info": "ID: 12  Total Passengers assigned: 2  Location: ( X: 20.0, Y: -20.0 )"
+                },
+                {
+                    "bus_stop_info": "ID: 13  Total Passengers assigned: 5  Location: ( X: 4.321098765, Y: -18.765432109 )"
+                },
+                {
+                    "bus_stop_info": "ID: 14  Total Passengers assigned: 4  Location: ( X: -10.298949300333334, Y: 0.6300662966666667 )"
+                },
+                {
+                    "bus_stop_info": "ID: 15  Total Passengers assigned: 5  Location: ( X: 18.901234567, Y: 0.123456789 )"
+                },
+                {
+                    "bus_stop_info": "ID: 16  Total Passengers assigned: 3  Location: ( X: -8.901234567, Y: -20.0 )"
+                },
+                {
+                    "bus_stop_info": "ID: 17  Total Passengers assigned: 4  Location: ( X: -10.4292109505, Y: 13.790624117 )"
+                }
+            ]
+        },
+        {
+            "instance": "instance_180",
+            "METAHEURISTIC": "heuristic",
+            "value": 943.8559517254533,
+            "MAX_BUS_STOP": 15,
+            "MAX_DISTANCE_WALK": 10,
+            "max_passengers": 170,
+            "conf": null,
+            "bus_stops": [
+                {
+                    "bus_stop_info": "ID: 0  Total Passengers assigned: 3  Location: ( X: 1.5104581466107734, Y: -0.9228393009168347 )"
+                },
+                {
+                    "bus_stop_info": "ID: 1  Total Passengers assigned: 15  Location: ( X: 5.767410649889183, Y: 11.295630045512763 )"
+                },
+                {
+                    "bus_stop_info": "ID: 2  Total Passengers assigned: 9  Location: ( X: 13.10948866000644, Y: 4.576294424841583 )"
+                },
+                {
+                    "bus_stop_info": "ID: 3  Total Passengers assigned: 14  Location: ( X: -12.7740241835625, Y: -8.6178294241875 )"
+                },
+                {
+                    "bus_stop_info": "ID: 4  Total Passengers assigned: 11  Location: ( X: 11.876368302857141, Y: 13.79511008642857 )"
+                },
+                {
+                    "bus_stop_info": "ID: 5  Total Passengers assigned: 15  Location: ( X: -3.4028880305833327, Y: 11.746590838166666 )"
+                },
+                {
+                    "bus_stop_info": "ID: 6  Total Passengers assigned: 4  Location: ( X: -2.083257465, Y: -10.738251169166666 )"
+                },
+                {
+                    "bus_stop_info": "ID: 7  Total Passengers assigned: 7  Location: ( X: -9.635084113125, Y: 3.3396829604999985 )"
+                },
+                {
+                    "bus_stop_info": "ID: 8  Total Passengers assigned: 14  Location: ( X: 13.199955762434783, Y: -6.119579451739131 )"
+                },
+                {
+                    "bus_stop_info": "ID: 9  Total Passengers assigned: 3  Location: ( X: -8.15528488123077, Y: 1.0547149485384615 )"
+                },
+                {
+                    "bus_stop_info": "ID: 10  Total Passengers assigned: 5  Location: ( X: 8.40687721275, Y: -9.80797116025 )"
+                },
+                {
+                    "bus_stop_info": "ID: 11  Total Passengers assigned: 6  Location: ( X: -20.0, Y: 20.0 )"
+                },
+                {
+                    "bus_stop_info": "ID: 12  Total Passengers assigned: 11  Location: ( X: 13.333333333333334, Y: -13.333333333333334 )"
+                },
+                {
+                    "bus_stop_info": "ID: 13  Total Passengers assigned: 10  Location: ( X: 4.321098765, Y: -18.765432109 )"
+                },
+                {
+                    "bus_stop_info": "ID: 14  Total Passengers assigned: 2  Location: ( X: -0.33627058020000045, Y: 0.3542177780000001 )"
+                },
+                {
+                    "bus_stop_info": "ID: 15  Total Passengers assigned: 6  Location: ( X: 18.901234567, Y: 0.123456789 )"
+                },
+                {
+                    "bus_stop_info": "ID: 16  Total Passengers assigned: 13  Location: ( X: 1.7957017165, Y: -16.4137315 )"
+                },
+                {
+                    "bus_stop_info": "ID: 17  Total Passengers assigned: 11  Location: ( X: -10.4292109505, Y: 13.790624117 )"
+                },
+                {
+                    "bus_stop_info": "ID: 18  Total Passengers assigned: 11  Location: ( X: -17.372648, Y: -0.394726 )"
+                }
+            ]
+        },
+        {
+            "instance": "instance_200",
+            "METAHEURISTIC": "heuristic",
+            "value": 742.1768579651734,
+            "MAX_BUS_STOP": 15,
+            "MAX_DISTANCE_WALK": 10,
+            "max_passengers": 150,
+            "conf": null,
+            "bus_stops": [
+                {
+                    "bus_stop_info": "ID: 0  Total Passengers assigned: 6  Location: ( X: 4.768254326589814, Y: -2.830353288760648 )"
+                },
+                {
+                    "bus_stop_info": "ID: 1  Total Passengers assigned: 13  Location: ( X: 5.738020079287912, Y: 13.160321109690734 )"
+                },
+                {
+                    "bus_stop_info": "ID: 2  Total Passengers assigned: 9  Location: ( X: 13.10948866000644, Y: 4.576294424841583 )"
+                },
+                {
+                    "bus_stop_info": "ID: 3  Total Passengers assigned: 12  Location: ( X: -12.7740241835625, Y: -8.6178294241875 )"
+                },
+                {
+                    "bus_stop_info": "ID: 4  Total Passengers assigned: 11  Location: ( X: 11.876368302857141, Y: 13.79511008642857 )"
+                },
+                {
+                    "bus_stop_info": "ID: 5  Total Passengers assigned: 12  Location: ( X: -3.3683485366999997, Y: 11.5440790058 )"
+                },
+                {
+                    "bus_stop_info": "ID: 6  Total Passengers assigned: 7  Location: ( X: -1.2845112913333334, Y: -13.984402669666668 )"
+                },
+                {
+                    "bus_stop_info": "ID: 7  Total Passengers assigned: 8  Location: ( X: -15.505245709999999, Y: 7.2720661243636355 )"
+                },
+                {
+                    "bus_stop_info": "ID: 8  Total Passengers assigned: 10  Location: ( X: 14.022661644571428, Y: -6.817236923333334 )"
+                },
+                {
+                    "bus_stop_info": "ID: 9  Total Passengers assigned: 6  Location: ( X: -7.220504621333334, Y: 1.3421683609166666 )"
+                },
+                {
+                    "bus_stop_info": "ID: 10  Total Passengers assigned: 3  Location: ( X: 6.897483243142857, Y: -13.105486754571428 )"
+                },
+                {
+                    "bus_stop_info": "ID: 11  Total Passengers assigned: 3  Location: ( X: -20.0, Y: 20.0 )"
+                },
+                {
+                    "bus_stop_info": "ID: 12  Total Passengers assigned: 12  Location: ( X: 13.333333333333334, Y: -13.333333333333334 )"
+                },
+                {
+                    "bus_stop_info": "ID: 13  Total Passengers assigned: 8  Location: ( X: 4.321098765, Y: -18.765432109 )"
+                },
+                {
+                    "bus_stop_info": "ID: 14  Total Passengers assigned: 2  Location: ( X: -0.33627058020000045, Y: 0.3542177780000001 )"
+                },
+                {
+                    "bus_stop_info": "ID: 15  Total Passengers assigned: 5  Location: ( X: 18.901234567, Y: 0.123456789 )"
+                },
+                {
+                    "bus_stop_info": "ID: 16  Total Passengers assigned: 7  Location: ( X: -8.901234567, Y: -20.0 )"
+                },
+                {
+                    "bus_stop_info": "ID: 17  Total Passengers assigned: 8  Location: ( X: -10.4292109505, Y: 13.790624117 )"
+                },
+                {
+                    "bus_stop_info": "ID: 18  Total Passengers assigned: 8  Location: ( X: -17.372648, Y: -0.394726 )"
+                }
+            ]
+        },
+        {
+            "instance": "instance_300",
+            "METAHEURISTIC": "heuristic",
+            "value": 1570.9186896074596,
+            "MAX_BUS_STOP": 25,
+            "MAX_DISTANCE_WALK": 10,
+            "max_passengers": 290,
+            "conf": null,
+            "bus_stops": [
+                {
+                    "bus_stop_info": "ID: 0  Total Passengers assigned: 13  Location: ( X: 6.741620638950711, Y: -2.9101206657725074 )"
+                },
+                {
+                    "bus_stop_info": "ID: 1  Total Passengers assigned: 18  Location: ( X: 5.107385690996232, Y: 9.592822923740803 )"
+                },
+                {
+                    "bus_stop_info": "ID: 2  Total Passengers assigned: 3  Location: ( X: 10.624314145460401, Y: 4.664651658946894 )"
+                },
+                {
+                    "bus_stop_info": "ID: 3  Total Passengers assigned: 8  Location: ( X: -11.84904737795238, Y: -8.364174894619048 )"
+                },
+                {
+                    "bus_stop_info": "ID: 4  Total Passengers assigned: 10  Location: ( X: 10.241398124705883, Y: 9.572239800294117 )"
+                },
+                {
+                    "bus_stop_info": "ID: 5  Total Passengers assigned: 12  Location: ( X: -4.158619335923077, Y: 11.698271312153846 )"
+                },
+                {
+                    "bus_stop_info": "ID: 6  Total Passengers assigned: 4  Location: ( X: -1.3700826682608693, Y: -8.09424843673913 )"
+                },
+                {
+                    "bus_stop_info": "ID: 7  Total Passengers assigned: 10  Location: ( X: -8.749049683103447, Y: 3.10515063337931 )"
+                },
+                {
+                    "bus_stop_info": "ID: 8  Total Passengers assigned: 15  Location: ( X: 13.181125898545456, Y: -3.56489478159091 )"
+                },
+                {
+                    "bus_stop_info": "ID: 9  Total Passengers assigned: 8  Location: ( X: -10.180515979851853, Y: 1.770087604851852 )"
+                },
+                {
+                    "bus_stop_info": "ID: 10  Total Passengers assigned: 7  Location: ( X: 7.6827271891111115, Y: -10.800455142444443 )"
+                },
+                {
+                    "bus_stop_info": "ID: 11  Total Passengers assigned: 10  Location: ( X: -20.0, Y: 20.0 )"
+                },
+                {
+                    "bus_stop_info": "ID: 12  Total Passengers assigned: 26  Location: ( X: 13.333333333333334, Y: -13.333333333333334 )"
+                },
+                {
+                    "bus_stop_info": "ID: 13  Total Passengers assigned: 16  Location: ( X: 4.321098765, Y: -18.765432109 )"
+                },
+                {
+                    "bus_stop_info": "ID: 14  Total Passengers assigned: 23  Location: ( X: -5.966147992928572, Y: 4.554567420714286 )"
+                },
+                {
+                    "bus_stop_info": "ID: 15  Total Passengers assigned: 15  Location: ( X: 18.901234567, Y: 0.123456789 )"
+                },
+                {
+                    "bus_stop_info": "ID: 16  Total Passengers assigned: 5  Location: ( X: -0.37978639174999995, Y: -12.5397785 )"
+                },
+                {
+                    "bus_stop_info": "ID: 17  Total Passengers assigned: 15  Location: ( X: -10.4292109505, Y: 13.790624117 )"
+                },
+                {
+                    "bus_stop_info": "ID: 18  Total Passengers assigned: 17  Location: ( X: -17.372648, Y: -0.394726 )"
+                },
+                {
+                    "bus_stop_info": "ID: 19  Total Passengers assigned: 12  Location: ( X: -9.661237, Y: -15.664296 )"
+                },
+                {
+                    "bus_stop_info": "ID: 20  Total Passengers assigned: 7  Location: ( X: -15.661237, Y: -18.404663333333335 )"
+                },
+                {
+                    "bus_stop_info": "ID: 21  Total Passengers assigned: 13  Location: ( X: 16.882339, Y: 17.994570333333332 )"
+                },
+                {
+                    "bus_stop_info": "ID: 22  Total Passengers assigned: 10  Location: ( X: -21.661237, Y: -12.882339 )"
+                },
+                {
+                    "bus_stop_info": "ID: 23  Total Passengers assigned: 13  Location: ( X: 21.882339, Y: 12.661237 )"
+                }
+            ]
+        },
+        {
+            "instance": "instance_300",
+            "METAHEURISTIC": "mh_HillClimbing",
+            "value": 1002.7710247565451,
+            "MAX_BUS_STOP": 25,
+            "MAX_DISTANCE_WALK": 10,
+            "max_passengers": 290,
+            "conf": {
+                "MAX_TRIALS": 3000,
+                "RUNS": 20,
+                "TRESHOLD": 2.75
+            },
+            "bus_stops": [
+                {
+                    "bus_stop_info": "ID: 0  Total Passengers assigned: 15  Location: ( X: 18.896405144650238, Y: -11.862422640548191 )"
+                },
+                {
+                    "bus_stop_info": "ID: 2  Total Passengers assigned: 9  Location: ( X: -14.24134111609128, Y: -16.876645371572362 )"
+                },
+                {
+                    "bus_stop_info": "ID: 4  Total Passengers assigned: 12  Location: ( X: 12.126618992581921, Y: -11.862422640548191 )"
+                },
+                {
+                    "bus_stop_info": "ID: 6  Total Passengers assigned: 12  Location: ( X: -18.876645371572362, Y: -10.207076670725291 )"
+                },
+                {
+                    "bus_stop_info": "ID: 8  Total Passengers assigned: 5  Location: ( X: 24.896405144650238, Y: 4.945168212548641 )"
+                },
+                {
+                    "bus_stop_info": "ID: 10  Total Passengers assigned: 8  Location: ( X: -6.207076670725291, Y: 18.896405144650238 )"
+                },
+                {
+                    "bus_stop_info": "ID: 12  Total Passengers assigned: 16  Location: ( X: 6.9606572246473775, Y: 17.943416297406912 )"
+                },
+                {
+                    "bus_stop_info": "ID: 14  Total Passengers assigned: 12  Location: ( X: -1.8924343683749854, Y: 5.629130226088812 )"
+                },
+                {
+                    "bus_stop_info": "ID: 16  Total Passengers assigned: 9  Location: ( X: -8.207076670725291, Y: -18.929470839184017 )"
+                },
+                {
+                    "bus_stop_info": "ID: 18  Total Passengers assigned: 9  Location: ( X: 5.746202493104317, Y: -16.876645371572362 )"
+                },
+                {
+                    "bus_stop_info": "ID: 20  Total Passengers assigned: 19  Location: ( X: 8.960657224647377, Y: -2.2709284399593628 )"
+                },
+                {
+                    "bus_stop_info": "ID: 22  Total Passengers assigned: 10  Location: ( X: -18.929470839184017, Y: -1.8924343683749854 )"
+                },
+                {
+                    "bus_stop_info": "ID: 24  Total Passengers assigned: 18  Location: ( X: 17.547950080594887, Y: 13.261250916658398 )"
+                },
+                {
+                    "bus_stop_info": "ID: 26  Total Passengers assigned: 9  Location: ( X: -7.796650889441693, Y: 13.261250916658398 )"
+                },
+                {
+                    "bus_stop_info": "ID: 28  Total Passengers assigned: 16  Location: ( X: -4.361081405780197, Y: 0.9451682125486407 )"
+                },
+                {
+                    "bus_stop_info": "ID: 30  Total Passengers assigned: 18  Location: ( X: -18.929470839184017, Y: 11.052513568888713 )"
+                },
+                {
+                    "bus_stop_info": "ID: 32  Total Passengers assigned: 10  Location: ( X: -8.207076670725291, Y: 5.746202493104317 )"
+                },
+                {
+                    "bus_stop_info": "ID: 34  Total Passengers assigned: 6  Location: ( X: -1.8924343683749854, Y: -7.796650889441693 )"
+                },
+                {
+                    "bus_stop_info": "ID: 36  Total Passengers assigned: 13  Location: ( X: -13.361862281036043, Y: 7.009474556522058 )"
+                },
+                {
+                    "bus_stop_info": "ID: 38  Total Passengers assigned: 11  Location: ( X: -1.8924343683749854, Y: -18.929470839184017 )"
+                },
+                {
+                    "bus_stop_info": "ID: 40  Total Passengers assigned: 13  Location: ( X: 7.629130226088812, Y: 11.052513568888713 )"
+                },
+                {
+                    "bus_stop_info": "ID: 42  Total Passengers assigned: 6  Location: ( X: -12.473362808193505, Y: -6.207076670725291 )"
+                },
+                {
+                    "bus_stop_info": "ID: 44  Total Passengers assigned: 11  Location: ( X: 18.896405144650238, Y: -4.361081405780197 )"
+                },
+                {
+                    "bus_stop_info": "ID: 46  Total Passengers assigned: 15  Location: ( X: 13.261250916658398, Y: -8.207076670725291 )"
+                },
+                {
+                    "bus_stop_info": "ID: 48  Total Passengers assigned: 8  Location: ( X: 13.261250916658398, Y: 5.629130226088812 )"
+                }
+            ]
+        },
+        {
+            "instance": "instance_300",
+            "METAHEURISTIC": "mh_HillClimbing",
+            "value": 1013.7389464883291,
+            "MAX_BUS_STOP": 25,
+            "MAX_DISTANCE_WALK": 10,
+            "max_passengers": 290,
+            "conf": {
+                "MAX_TRIALS": 3000,
+                "RUNS": 20,
+                "TRESHOLD": 4.75
+            },
+            "bus_stops": [
+                {
+                    "bus_stop_info": "ID: 0  Total Passengers assigned: 13  Location: ( X: 11.634822825054528, Y: -12.309239986773413 )"
+                },
+                {
+                    "bus_stop_info": "ID: 2  Total Passengers assigned: 18  Location: ( X: -18.77191013017263, Y: 11.413890302659965 )"
+                },
+                {
+                    "bus_stop_info": "ID: 4  Total Passengers assigned: 10  Location: ( X: 18.44404328755455, Y: -3.262111614974991 )"
+                },
+                {
+                    "bus_stop_info": "ID: 6  Total Passengers assigned: 18  Location: ( X: 13.433049384901594, Y: -7.262111614974991 )"
+                },
+                {
+                    "bus_stop_info": "ID: 8  Total Passengers assigned: 8  Location: ( X: 5.347380390558161, Y: -17.289380240884405 )"
+                },
+                {
+                    "bus_stop_info": "ID: 10  Total Passengers assigned: 10  Location: ( X: -18.77191013017263, Y: -1.1958651024271916 )"
+                },
+                {
+                    "bus_stop_info": "ID: 12  Total Passengers assigned: 9  Location: ( X: -1.1958651024271916, Y: -18.80866704662916 )"
+                },
+                {
+                    "bus_stop_info": "ID: 14  Total Passengers assigned: 12  Location: ( X: -18.80866704662916, Y: -11.262111614974991 )"
+                },
+                {
+                    "bus_stop_info": "ID: 16  Total Passengers assigned: 8  Location: ( X: -5.262111614974991, Y: 18.65505646273197 )"
+                },
+                {
+                    "bus_stop_info": "ID: 18  Total Passengers assigned: 8  Location: ( X: -3.2601381682052697, Y: -9.262111614974991 )"
+                },
+                {
+                    "bus_stop_info": "ID: 20  Total Passengers assigned: 10  Location: ( X: -8.28339309277202, Y: 5.347380390558161 )"
+                },
+                {
+                    "bus_stop_info": "ID: 22  Total Passengers assigned: 12  Location: ( X: -1.7979067693342934, Y: 6.326151759191074 )"
+                },
+                {
+                    "bus_stop_info": "ID: 24  Total Passengers assigned: 13  Location: ( X: 6.326151759191074, Y: 18.65505646273197 )"
+                },
+                {
+                    "bus_stop_info": "ID: 26  Total Passengers assigned: 16  Location: ( X: -5.262111614974991, Y: 0.5434575124398968 )"
+                },
+                {
+                    "bus_stop_info": "ID: 28  Total Passengers assigned: 10  Location: ( X: -13.928871584940543, Y: -7.262111614974991 )"
+                },
+                {
+                    "bus_stop_info": "ID: 30  Total Passengers assigned: 13  Location: ( X: 6.326151759191074, Y: 11.413890302659965 )"
+                },
+                {
+                    "bus_stop_info": "ID: 32  Total Passengers assigned: 6  Location: ( X: 13.433049384901594, Y: 18.44404328755455 )"
+                },
+                {
+                    "bus_stop_info": "ID: 34  Total Passengers assigned: 9  Location: ( X: -8.377038397317811, Y: 13.634822825054528 )"
+                },
+                {
+                    "bus_stop_info": "ID: 36  Total Passengers assigned: 5  Location: ( X: 28.65505646273197, Y: 6.120592728497986 )"
+                },
+                {
+                    "bus_stop_info": "ID: 38  Total Passengers assigned: 9  Location: ( X: 13.433049384901594, Y: 7.347380390558161 )"
+                },
+                {
+                    "bus_stop_info": "ID: 40  Total Passengers assigned: 13  Location: ( X: -13.928871584940543, Y: 7.347380390558161 )"
+                },
+                {
+                    "bus_stop_info": "ID: 42  Total Passengers assigned: 17  Location: ( X: 8.503387947558942, Y: -1.7979067693342934 )"
+                },
+                {
+                    "bus_stop_info": "ID: 44  Total Passengers assigned: 14  Location: ( X: 18.44404328755455, Y: 13.413890302659965 )"
+                },
+                {
+                    "bus_stop_info": "ID: 46  Total Passengers assigned: 15  Location: ( X: 19.600028951110417, Y: -12.309239986773413 )"
+                },
+                {
+                    "bus_stop_info": "ID: 48  Total Passengers assigned: 14  Location: ( X: -9.262111614974991, Y: -18.77191013017263 )"
+                }
+            ]
+        },
+        {
+            "instance": "instance_300",
+            "METAHEURISTIC": "mh_HillClimbing",
+            "value": 1008.7907535975771,
+            "MAX_BUS_STOP": 25,
+            "MAX_DISTANCE_WALK": 10,
+            "max_passengers": 290,
+            "conf": {
+                "ECHO": false,
+                "MAX_TRIALS": 3000,
+                "RUNS": 20,
+                "TRESHOLD": 10.75
+            },
+            "bus_stops": [
+                {
+                    "bus_stop_info": "ID: 0  Total Passengers assigned: 15  Location: ( X: -18.802325927665287, Y: 10.105998688368299 )"
+                },
+                {
+                    "bus_stop_info": "ID: 2  Total Passengers assigned: 14  Location: ( X: -15.50802303691874, Y: -6.103557744048162 )"
+                },
+                {
+                    "bus_stop_info": "ID: 4  Total Passengers assigned: 16  Location: ( X: 19.448691899971735, Y: -11.415078732402062 )"
+                },
+                {
+                    "bus_stop_info": "ID: 6  Total Passengers assigned: 8  Location: ( X: -19.732293144550177, Y: -10.876795605781066 )"
+                },
+                {
+                    "bus_stop_info": "ID: 8  Total Passengers assigned: 7  Location: ( X: -6.103557744048162, Y: 12.238698714180671 )"
+                },
+                {
+                    "bus_stop_info": "ID: 10  Total Passengers assigned: 19  Location: ( X: 16.746899541860657, Y: 14.01164852898961 )"
+                },
+                {
+                    "bus_stop_info": "ID: 12  Total Passengers assigned: 15  Location: ( X: -7.350361890069955, Y: -15.50802303691874 )"
+                },
+                {
+                    "bus_stop_info": "ID: 14  Total Passengers assigned: 10  Location: ( X: 5.436089490959269, Y: -16.842695370529576 )"
+                },
+                {
+                    "bus_stop_info": "ID: 16  Total Passengers assigned: 14  Location: ( X: -2.6546337494545185, Y: 1.0858149544526938 )"
+                },
+                {
+                    "bus_stop_info": "ID: 18  Total Passengers assigned: 12  Location: ( X: 7.510573949172851, Y: 11.894914259185345 )"
+                },
+                {
+                    "bus_stop_info": "ID: 20  Total Passengers assigned: 9  Location: ( X: 12.238698714180671, Y: 4.785060225617844 )"
+                },
+                {
+                    "bus_stop_info": "ID: 22  Total Passengers assigned: 10  Location: ( X: 19.01568867528907, Y: -3.350361890069955 )"
+                },
+                {
+                    "bus_stop_info": "ID: 24  Total Passengers assigned: 12  Location: ( X: -2.0382709657903817, Y: 6.5040069584759514 )"
+                },
+                {
+                    "bus_stop_info": "ID: 26  Total Passengers assigned: 17  Location: ( X: 12.238698714180671, Y: -7.350361890069955 )"
+                },
+                {
+                    "bus_stop_info": "ID: 28  Total Passengers assigned: 6  Location: ( X: -17.945411742306224, Y: 15.01568867528907 )"
+                },
+                {
+                    "bus_stop_info": "ID: 30  Total Passengers assigned: 8  Location: ( X: -4.911886545318586, Y: 19.01568867528907 )"
+                },
+                {
+                    "bus_stop_info": "ID: 32  Total Passengers assigned: 17  Location: ( X: -12.593751219975658, Y: 7.510573949172851 )"
+                },
+                {
+                    "bus_stop_info": "ID: 34  Total Passengers assigned: 8  Location: ( X: -1.5253700355754631, Y: -18.802325927665287 )"
+                },
+                {
+                    "bus_stop_info": "ID: 36  Total Passengers assigned: 15  Location: ( X: 7.510573949172851, Y: -2.0382709657903817 )"
+                },
+                {
+                    "bus_stop_info": "ID: 38  Total Passengers assigned: 13  Location: ( X: 12.045587970478408, Y: -11.415078732402062 )"
+                },
+                {
+                    "bus_stop_info": "ID: 40  Total Passengers assigned: 15  Location: ( X: 6.238698714180671, Y: 18.056791910986554 )"
+                },
+                {
+                    "bus_stop_info": "ID: 42  Total Passengers assigned: 13  Location: ( X: -7.350361890069955, Y: 2.1620208765293967 )"
+                },
+                {
+                    "bus_stop_info": "ID: 44  Total Passengers assigned: 4  Location: ( X: -29.670875642677267, Y: -4.103557744048162 )"
+                },
+                {
+                    "bus_stop_info": "ID: 46  Total Passengers assigned: 8  Location: ( X: -14.911061906103086, Y: -16.842695370529576 )"
+                },
+                {
+                    "bus_stop_info": "ID: 48  Total Passengers assigned: 5  Location: ( X: 27.927587104233638, Y: 5.436089490959269 )"
+                }
+            ]
+        },
+        {
+            "instance": "instance_300",
+            "METAHEURISTIC": "mh_HillClimbing",
+            "value": 995.485971650271,
+            "MAX_BUS_STOP": 25,
+            "MAX_DISTANCE_WALK": 10,
+            "max_passengers": 290,
+            "conf": {
+                "MAX_TRIALS": 3000,
+                "RUNS": 20,
+                "TRESHOLD": 9.75
+            },
+            "bus_stops": [
+                {
+                    "bus_stop_info": "ID: 0  Total Passengers assigned: 6  Location: ( X: -18.444296132969015, Y: -0.5354482295538325 )"
+                },
+                {
+                    "bus_stop_info": "ID: 2  Total Passengers assigned: 11  Location: ( X: 5.854303072497139, Y: -17.34526948454882 )"
+                },
+                {
+                    "bus_stop_info": "ID: 4  Total Passengers assigned: 10  Location: ( X: -15.0081927067932, Y: -6.769319717052781 )"
+                },
+                {
+                    "bus_stop_info": "ID: 6  Total Passengers assigned: 25  Location: ( X: 12.713591738840684, Y: -9.704568942522762 )"
+                },
+                {
+                    "bus_stop_info": "ID: 8  Total Passengers assigned: 14  Location: ( X: 19.265809186470385, Y: -13.0081927067932 )"
+                },
+                {
+                    "bus_stop_info": "ID: 10  Total Passengers assigned: 12  Location: ( X: 19.265809186470385, Y: -4.263307309669141 )"
+                },
+                {
+                    "bus_stop_info": "ID: 12  Total Passengers assigned: 12  Location: ( X: -13.815191942453994, Y: 7.854303072497139 )"
+                },
+                {
+                    "bus_stop_info": "ID: 14  Total Passengers assigned: 18  Location: ( X: -18.444296132969015, Y: 11.310533440110149 )"
+                },
+                {
+                    "bus_stop_info": "ID: 16  Total Passengers assigned: 9  Location: ( X: -7.64250150995527, Y: -18.221915440385295 )"
+                },
+                {
+                    "bus_stop_info": "ID: 18  Total Passengers assigned: 6  Location: ( X: -1.951604201947319, Y: -8.263307309669141 )"
+                },
+                {
+                    "bus_stop_info": "ID: 20  Total Passengers assigned: 12  Location: ( X: -9.704568942522762, Y: 7.657267354472637 )"
+                },
+                {
+                    "bus_stop_info": "ID: 22  Total Passengers assigned: 11  Location: ( X: -2.7880608846041195, Y: 1.4645517704461675 )"
+                },
+                {
+                    "bus_stop_info": "ID: 24  Total Passengers assigned: 10  Location: ( X: -7.543963698255936, Y: 1.4645517704461675 )"
+                },
+                {
+                    "bus_stop_info": "ID: 26  Total Passengers assigned: 21  Location: ( X: 17.046857294819, Y: 13.06084737040947 )"
+                },
+                {
+                    "bus_stop_info": "ID: 28  Total Passengers assigned: 7  Location: ( X: -18.970485290439438, Y: -11.0081927067932 )"
+                },
+                {
+                    "bus_stop_info": "ID: 30  Total Passengers assigned: 9  Location: ( X: -13.815191942453994, Y: -17.34526948454882 )"
+                },
+                {
+                    "bus_stop_info": "ID: 32  Total Passengers assigned: 14  Location: ( X: -1.2368545180612251, Y: 6.794261077204478 )"
+                },
+                {
+                    "bus_stop_info": "ID: 34  Total Passengers assigned: 5  Location: ( X: -28.970485290439438, Y: -5.027546158541448 )"
+                },
+                {
+                    "bus_stop_info": "ID: 36  Total Passengers assigned: 18  Location: ( X: 7.854303072497139, Y: -2.93452311103934 )"
+                },
+                {
+                    "bus_stop_info": "ID: 38  Total Passengers assigned: 10  Location: ( X: -5.542039181471797, Y: 19.046857294819 )"
+                },
+                {
+                    "bus_stop_info": "ID: 40  Total Passengers assigned: 12  Location: ( X: 7.854303072497139, Y: 11.310533440110149 )"
+                },
+                {
+                    "bus_stop_info": "ID: 42  Total Passengers assigned: 15  Location: ( X: 6.794261077204478, Y: 17.421907114853795 )"
+                },
+                {
+                    "bus_stop_info": "ID: 44  Total Passengers assigned: 11  Location: ( X: -1.951604201947319, Y: -18.444296132969015 )"
+                },
+                {
+                    "bus_stop_info": "ID: 46  Total Passengers assigned: 7  Location: ( X: 11.809894054987502, Y: 4.023067912488504 )"
+                },
+                {
+                    "bus_stop_info": "ID: 48  Total Passengers assigned: 5  Location: ( X: 29.265809186470385, Y: 5.854303072497139 )"
                 }
             ]
         }

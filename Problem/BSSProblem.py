@@ -94,12 +94,12 @@ def print_solution_bss(mh: str, bus_stop_list, eval, conf=None):
     print("\n")
     print("**********************************************************\n")
 
-    if mh != "heuristic":
-        translate = f'Mejor evaluación encontrada con la metaheuristica {MH[mh]}: {eval}, Instancia del problema: {tam}'
-        engine = pyttsx3.init()
-        engine.setProperty('rate', 143)
-        engine.say(translate)
-        engine.runAndWait()
+    # if mh != "heuristic":
+    #     translate = f'Mejor evaluación encontrada con la metaheuristica {MH[mh]}: {eval}, Instancia del problema: {tam}'
+    #     engine = pyttsx3.init()
+    #     engine.setProperty('rate', 143)
+    #     engine.say(translate)
+    #     engine.runAndWait()
 
 
 def assign_passengers(bus_stop_list):

@@ -53,10 +53,10 @@ conf_rs =[
 #     conf_rs=conf_rs
 # )
 
-# simple_mh_run(
-#     instance="instance_300", 
-#     mh="mh_HillClimbing", 
-#     conf={'MAX_TRIALS': 2000, 'RUNS':10, 'TRESHOLD': 1.55}
-# )
+simple_mh_run(
+    instance="instance_300", 
+    mh="mh_HillClimbing", 
+    conf={'MAX_TRIALS': 3000, 'RUNS':20, 'TRESHOLD': 9.75}
+)
 
-heuristic_solution(instance="instance_160")
+# heuristic_solution(instance="instance_300")
