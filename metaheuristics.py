@@ -1,11 +1,16 @@
 import random
 import utils
 import pyttsx3
+import numpy as np, math
+
+from Evaluate.MatrixManage.ManageMatrix import _generate_matrix, calculate_distance_manhattan, BIG_FLOAT
 
 # ----------------------------------------------------------------------
 # Import the objective function and operator from the corresponding problem
 # ----------------------------------------------------------------------
 from Problem.BSSProblem import load_problem
+from Problem.ManageProblem import BusStop, Point
+from Problem.BSSProblem import bss
 from utils import play_sound_changed
 from Problem.BSSProblem import (
     print_solution_bss,
@@ -289,6 +294,79 @@ def mh_GeneticAlgorithm():
             print()
     best_solution = solutions[0][1]
     return best_solution
+
+def heuristic_solution():
+
+    load_problem(instance="instance_10", mh="mh_HillClimbing")
+
+    matrix = _generate_matrix(passenger_list=bss.PASSENGER_LIST, bus_stop_list=bss.PASSENGER_LIST)
+
+    np.fill_diagonal(matrix, matrix.diagonal() + BIG_FLOAT)
+
+    result = {}
+
+    visited = []
+
+    bus_stop_list = []
+
+    for i in range(len(bss.PASSENGER_LIST)):
+
+        if np.all(matrix == BIG_FLOAT):
+            break
+
+        if i not in visited:
+
+            result[f"neighbors_{i}"] = [i]
+
+            for j in range(len(bss.PASSENGER_LIST)):
+                    value = matrix[j,i]
+
+                    if value <= bss.MAX_DISTANCE_WALK:
+                        result[f"neighbors_{i}"].append(j)
+
+                        visited.append(j)
+
+                        matrix[j, :] = BIG_FLOAT
+                        matrix[:, j] = BIG_FLOAT
+
+    bus_stop_id = 0
+
+    for neighbors in result.values():
+        coordinate_x_sum = 0.0
+        coordinate_y_sum = 0.0
+
+        pass_list = []
+
+        for n in neighbors:
+            passenger = bss.get_passenger(id=n)
+
+            pass_list.append(passenger)
+
+            coordinate_x_sum += passenger.location.coordinate_x
+            coordinate_y_sum += passenger.location.coordinate_y
+
+        prom_x = coordinate_x_sum / len(neighbors)
+        prom_y = coordinate_y_sum / len(neighbors)
+
+        bus_stop: BusStop = BusStop(
+                location=Point(
+                    coordinate_x=prom_x, 
+                    coordinate_y=prom_y
+                ),
+                id=bus_stop_id
+            )
+
+        bus_stop.passengers_list = pass_list
+
+        bus_stop_list.append(
+            bus_stop
+        )
+
+        bus_stop_id+=1
+    
+    eval = objective_function(solution=bus_stop_list)
+
+    
 
 def execute_mh(search_procedure, run = 0):
     if search_procedure in {
