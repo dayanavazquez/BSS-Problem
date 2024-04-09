@@ -295,9 +295,9 @@ def mh_GeneticAlgorithm():
     best_solution = solutions[0][1]
     return best_solution
 
-def heuristic_solution():
+def heuristic_solution(instance):
 
-    load_problem(instance="instance_10", mh="mh_HillClimbing")
+    load_problem(instance=instance, mh="heuristic")
 
     matrix = _generate_matrix(passenger_list=bss.PASSENGER_LIST, bus_stop_list=bss.PASSENGER_LIST)
 
@@ -366,7 +366,7 @@ def heuristic_solution():
     
     eval = objective_function(solution=bus_stop_list)
 
-    
+    print_solution_bss(mh="heuristic", bus_stop_list=bus_stop_list, eval=eval)
 
 def execute_mh(search_procedure, run = 0):
     if search_procedure in {
