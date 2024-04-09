@@ -301,7 +301,7 @@ def heuristic_solution(instance):
 
     matrix = _generate_matrix(passenger_list=bss.PASSENGER_LIST, bus_stop_list=bss.PASSENGER_LIST)
 
-    np.fill_diagonal(matrix, matrix.diagonal() + BIG_FLOAT)
+    np.fill_diagonal(matrix, BIG_FLOAT)
 
     result = {}
 
@@ -338,12 +338,15 @@ def heuristic_solution(instance):
         pass_list = []
 
         for n in neighbors:
-            passenger = bss.get_passenger(id=n)
+            try:
+                passenger = bss.get_passenger(id=n)
 
-            pass_list.append(passenger)
+                pass_list.append(passenger)
 
-            coordinate_x_sum += passenger.location.coordinate_x
-            coordinate_y_sum += passenger.location.coordinate_y
+                coordinate_x_sum += passenger.location.coordinate_x
+                coordinate_y_sum += passenger.location.coordinate_y
+            except Exception as e:
+                i = 0
 
         prom_x = coordinate_x_sum / len(neighbors)
         prom_y = coordinate_y_sum / len(neighbors)
@@ -470,3 +473,10 @@ def multi_run(instances, mh, conf_hc, conf_ee, conf_rs):
     engine.setProperty('rate', 140)
     engine.say(TRANSLATE)
     engine.runAndWait()
+
+def simple_mh_run(instance, mh, conf):
+    load_problem(instance=instance, mh=mh)
+    print_parameters()
+    search_procedures = [[mh, conf]]
+    results = compare_search_procedures(search_procedures=search_procedures, instance=instance)
+    print_results(search_procedures,results)
