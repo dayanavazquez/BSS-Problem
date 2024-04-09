@@ -1,6 +1,6 @@
 {
     "instance_10":{
-        "max_distance_walk": 10,
+        "max_distance_walk": 20,
         "max_bus_stop": 2,
         "max_coordinate": 20.0,
         "min_coordinate": -20.0,

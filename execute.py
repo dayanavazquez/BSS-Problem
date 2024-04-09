@@ -1,4 +1,4 @@
-from metaheuristics import multi_run
+from metaheuristics import multi_run, heuristic_solution
 
 instances = [
     "instance_10",
@@ -10,7 +10,7 @@ instances = [
     "instance_120",
     "instance_160",
     "instance_180", 
-    "instance_200", 
+    "instance_200",
     "instance_250",
     "instance_300"
     ]
@@ -45,10 +45,12 @@ conf_rs =[
     {'MAX_TRIALS': 1000, 'RUNS': 10}
 ]
 
-multi_run( 
-    instances=instances, 
-    mh=mh, 
-    conf_hc=conf_hc, 
-    conf_ee=conf_ee, 
-    conf_rs=conf_rs
-)
+# multi_run( 
+#     instances=instances, 
+#     mh=mh, 
+#     conf_hc=conf_hc, 
+#     conf_ee=conf_ee, 
+#     conf_rs=conf_rs
+# )
+
+heuristic_solution()

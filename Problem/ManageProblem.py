@@ -10,6 +10,12 @@ class BSS():
         self.MIN_COORDINATE = 20.0
         self.METAHEURISTIC = "m"
 
+    def get_passenger(self, id):
+        for passenger in self.PASSENGER_LIST:
+            if passenger.id == id:
+                return passenger
+        return None
+
 class Point():
 
     def __init__(self, coordinate_x: float, coordinate_y: float):
