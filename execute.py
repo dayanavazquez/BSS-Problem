@@ -53,4 +53,4 @@ conf_rs =[
 #     conf_rs=conf_rs
 # )
 
-heuristic_solution()
+heuristic_solution(instance="instance_10")
